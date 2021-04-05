@@ -1,0 +1,14 @@
+.header {
+  background-color: $header-background;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1175px;
+  min-height: 84px;
+
+  margin: 0 auto;
+}

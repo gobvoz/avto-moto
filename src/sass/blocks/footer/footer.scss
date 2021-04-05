@@ -1,0 +1,14 @@
+.footer {
+  background-color: $main-background;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1175px;
+
+  margin: 0 auto;
+  min-height: 82px;
+}
