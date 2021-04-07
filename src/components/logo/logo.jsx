@@ -1,7 +1,7 @@
 function Logo() {
   return (
-    <a class="logo" href="!#">
-      <img class="logo__image" src="img/logo.png" alt="Логотип автосалона" with="134" height="55" />
+    <a className="logo" href="!#">
+      <img className="logo__image" src="img/logo.png" alt="Логотип автосалона" width="134" height="55" />
     </a>
   );
 }

@@ -2,15 +2,21 @@ import Slider from '../slider/slider';
 import Details from '../details/details';
 import Content from '../content/content';
 
-function Main() {
+function Main({ slides, chars, details }) {
   return (
-    <main class="main">
-      <div class="main__inner">
-        <h1 class="visually-hidden">Марпех 11</h1>
+    <main className="main">
+      <div className="main__inner">
+        <h1 className="visually-hidden">Марпех 11</h1>
 
-        <Slider />
-        <Details />
-        <Content />
+        <Slider
+          slides={ slides }
+        />
+        <Details
+          details={ details }
+        />
+        <Content 
+          chars={ chars }
+        />
 
       </div>
     </main>

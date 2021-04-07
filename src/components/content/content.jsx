@@ -1,28 +1,44 @@
+import {useState} from 'react';
+
 import Chars from '../chars/chars';
-// import Reviews from '../reviews/reviews';
-// import Contacts from '../contacts/contacts';
+import Reviews from '../reviews/reviews';
+import Contacts from '../contacts/contacts';
 
-function Content() {
+function Content({ chars }) {
+  const [currentTabNumber, updateCurrentTabNumber] = useState(1);
+
   return (
-    <section class="content">
-      <h2 class="visually-hidden">Дополнительная информация</h2>
+    <section className="content">
+      <h2 className="visually-hidden">Дополнительная информация</h2>
 
-      <ul class="content__list">
-        <li class="content__element">
-          <input class="content__check visually-hidden" type="radio" name="category" id="chars" value="1" checked />
-          <label class="content__label" for="chars">Характеристики</label>
+      <ul className="content__list"
+        onChange={ evt => {console.log(evt.target.value);  updateCurrentTabNumber(Number(evt.target.value))} }
+      >
+        <li className="content__element">
+          <input
+            className="content__check visually-hidden" type="radio" name="category" id="chars" value="1" checked={ currentTabNumber === 1 ? true : false } />
+          <label className="content__label" htmlFor="chars">Характеристики</label>
         </li>
-        <li class="content__element">
-          <input class="content__check visually-hidden" type="radio" name="category" id="reviews" value="2" />
-          <label class="content__label" for="reviews">Отзывы</label>
+        <li className="content__element">
+          <input className="content__check visually-hidden" type="radio" name="category" id="reviews" value="2" checked={ currentTabNumber === 2 ? true : false }/>
+          <label className="content__label" htmlFor="reviews">Отзывы</label>
         </li>
-        <li class="content__element">
-          <input class="content__check visually-hidden" type="radio" name="category" id="contacts" value="3" />
-          <label class="content__label" for="contacts">Контакты</label>
+        <li className="content__element">
+          <input className="content__check visually-hidden" type="radio" name="category" id="contacts" value="3" checked={ currentTabNumber === 3 ? true : false }/>
+          <label className="content__label" htmlFor="contacts">Контакты</label>
         </li>
       </ul>
 
-      <Chars />
+      {
+        currentTabNumber === 1
+        ? <Chars chars={ chars } />
+        : currentTabNumber === 2
+          ? <Reviews />
+          : <Contacts />
+      }
+      {/* <Chars
+        chars={ chars }
+      /> */}
       {/* <Reviews />
       <Contacts /> */}
       

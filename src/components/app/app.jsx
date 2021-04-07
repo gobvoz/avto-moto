@@ -2,11 +2,15 @@ import Header from '../header/header';
 import Main from '../main/main';
 import Footer from '../footer/footer';
 
-function App() {
+function App({ slides, chars, details }) {
   return (
     <>
       <Header />
-      <Main />
+      <Main
+        slides={ slides }
+        chars={ chars }
+        details={ details }
+      />
       <Footer />
     </>
   );

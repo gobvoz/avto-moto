@@ -5,6 +5,7 @@
 
   max-width: 565px;
 
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -22,6 +23,12 @@
   font-size: 16px;
 
   border-bottom: 1px solid $border-color;
+}
+
+.chars__define:nth-of-type(1),
+.chars__describe:nth-of-type(1) {
+  padding-top: 0;
+  height: 30px;
 }
 
 .chars__describe {
