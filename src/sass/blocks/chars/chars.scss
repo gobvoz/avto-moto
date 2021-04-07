@@ -1,0 +1,30 @@
+  
+.chars__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 565px;
+
+  margin-bottom: 0;
+}
+
+.chars__define,
+.chars__describe {
+  display: block;
+  box-sizing: border-box;
+  width: 50%;
+
+  margin: 0;
+  padding: 20px 0 0 0;
+
+  height: 50px;
+
+  font-size: 16px;
+
+  border-bottom: 1px solid $border-color;
+}
+
+.chars__describe {
+  color: $black-color;
+  text-align: right;
+}

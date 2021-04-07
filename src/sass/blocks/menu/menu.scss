@@ -1,6 +1,9 @@
+.menu {
+  width: 100%;
+}
+
 .menu__list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   list-style: none;
@@ -9,8 +12,20 @@
   padding: 0;
 }
 
-.menu__item {
+.menu__list--header {
+  justify-content: flex-end;
+}
+
+.menu__list--header .menu__item {
   margin-left: 68px;
+}
+
+.menu__list--footer .menu__item + .menu__item {
+  margin-left: 20px;
+}
+
+.menu__list--footer {
+  justify-content: space-between;
 }
 
 .menu__link {

@@ -6,9 +6,7 @@ function Header() {
     <header class="header">
       <div class="header__inner">
         <Logo />
-        <nav>
-          <Menu />
-        </nav>
+        <Menu />
       </div>
     </header>
   );

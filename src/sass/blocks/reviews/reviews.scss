@@ -1,0 +1,172 @@
+.reviews {
+  box-sizing: border-box;
+  position: relative;
+
+  padding-right: 10px;
+
+  width: 100%;
+}
+
+.review {
+  box-sizing: border-box;
+
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-color;
+}
+
+.reviews__add-review {
+  position: absolute;
+  top: 0;
+  right: 10px;
+
+  width: 189px;
+  height: 52px;
+
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: $red-color;
+  border: 1px solid $red-color;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.review__name {
+  padding: 0;
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.reviews__pros-cons-list {
+  margin: 0;
+  margin-top: 12px;
+  padding-left: 19px;
+
+  color:$black-color;
+}
+
+.reviews__pros-cons-define {
+  margin-bottom: 5px;
+
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.reviews__pros-cons-describe {
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 0;
+}
+
+.reviews__pros-cons-define--pros::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+
+  color: $red-color;
+}
+
+.reviews__pros-cons-define--cons::before {
+  content: "-";
+  position: absolute;
+  left: 1px;
+
+  color: $red-color;
+}
+
+.review__comment {
+  margin: 0;
+
+  color:$black-color;
+
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.review__body {
+  margin-top: 5px;
+
+  color:$black-color;
+}
+
+.review__rating {
+  margin-bottom: 25px;
+}
+
+// .review__stars {
+//   display: inline-block;
+//   width: 100px;
+//   height: 17px;
+
+//   margin: 0 20px 0 0;
+//   padding: 0;
+//   border: none;
+
+//   position: relative;
+
+//   background-image: url(../../../img/star_gray.png);
+//   background-repeat: repeat-x;
+// }
+
+// .review__star {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+  
+//   height: 17px;
+//   margin: 0px;
+
+//   appearance: none;
+
+//   &:nth-of-type(1) {
+//     width: 16px;
+//     z-index: 5;
+//   }
+//   &:nth-of-type(2) {
+//     width: 36px;
+//     z-index: 4;
+//   }
+//   &:nth-of-type(3) {
+//     width: 56px;
+//     z-index: 3;
+//   }
+//   &:nth-of-type(4) {
+//     width: 76px;
+//     z-index: 2;
+//   }
+//   &:nth-of-type(5) {
+//     width: 96px;
+//     z-index: 1;
+//   }
+
+//   &:checked {
+//     background-image: url(../../../img/star_red.png);
+//     background-repeat: repeat-x;
+//   }
+// }
+
+.review__is-recommend {
+  margin-left: 20px;
+  font-size: 15px;
+  color: $red-color;
+}
+
+.review__ago {
+  color: $alternative-color;
+  font-size: 14px;
+}
+
+.review__answer {
+  margin-left: 25px;
+
+  font-size: 16px;
+  text-decoration: none;
+
+  color: $red-color;
+}
