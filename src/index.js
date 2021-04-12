@@ -4,8 +4,8 @@ import { createStore } from 'redux';
 
 import reducers from './store/reducers';
 import slides from './mock/slides.js';
-// import chars from './mock/chars';
-// import details from './mock/details';
+import chars from './mock/chars.js';
+import details from './mock/details.js';
 
 import App from './components/app/app';
 import './sass/style.scss';
@@ -16,8 +16,8 @@ ReactDOM.render(
   <Provider store={store}>
     <App 
       slides={ slides }
-      // chars
-      // details
+      chars={ chars }
+      details={ details }
     />
   </Provider>,
   document.getElementById('root')

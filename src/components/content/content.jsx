@@ -12,19 +12,19 @@ function Content({ chars }) {
       <h2 className="visually-hidden">Дополнительная информация</h2>
 
       <ul className="content__list"
-        onChange={ evt => {console.log(evt.target.value);  updateCurrentTabNumber(Number(evt.target.value))} }
+        onChange={ evt => updateCurrentTabNumber(Number(evt.target.value)) }
       >
         <li className="content__element">
           <input
-            className="content__check visually-hidden" type="radio" name="category" id="chars" value="1" checked={ currentTabNumber === 1 ? true : false } />
+            className="content__check visually-hidden" type="radio" name="category" id="chars" value="1" defaultChecked={ currentTabNumber === 1 ? true : false } />
           <label className="content__label" htmlFor="chars">Характеристики</label>
         </li>
         <li className="content__element">
-          <input className="content__check visually-hidden" type="radio" name="category" id="reviews" value="2" checked={ currentTabNumber === 2 ? true : false }/>
+          <input className="content__check visually-hidden" type="radio" name="category" id="reviews" value="2" defaultChecked={ currentTabNumber === 2 ? true : false }/>
           <label className="content__label" htmlFor="reviews">Отзывы</label>
         </li>
         <li className="content__element">
-          <input className="content__check visually-hidden" type="radio" name="category" id="contacts" value="3" checked={ currentTabNumber === 3 ? true : false }/>
+          <input className="content__check visually-hidden" type="radio" name="category" id="contacts" value="3" defaultChecked={ currentTabNumber === 3 ? true : false }/>
           <label className="content__label" htmlFor="contacts">Контакты</label>
         </li>
       </ul>
@@ -36,11 +36,6 @@ function Content({ chars }) {
           ? <Reviews />
           : <Contacts />
       }
-      {/* <Chars
-        chars={ chars }
-      /> */}
-      {/* <Reviews />
-      <Contacts /> */}
       
     </section>
   );
