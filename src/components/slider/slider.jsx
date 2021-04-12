@@ -23,6 +23,7 @@ function Slider({ slides }) {
       <div className="slider__wrapper">
         <button
           className="slider__button slider__button--prev"
+          aria-label="Показать предыдущее фото"
           onClick={() => updateCurrentSlideNumber(currentSlideNumber - 1)}
           disabled={ 
             currentSlideNumber === MIN_SLIDE_NUMBER
@@ -49,6 +50,7 @@ function Slider({ slides }) {
         
         <button
           className="slider__button slider__button--next"
+          aria-label="Показать следующее фото"
           onClick={ () => updateCurrentSlideNumber(currentSlideNumber + 1) }
           disabled={ 
             currentSlideNumber === MAX_SLIDE_NUMBER

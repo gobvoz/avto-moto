@@ -1,11 +1,11 @@
 .slider {
   margin-bottom: 90px;
-  margin-right: 54px;
+  margin-right: 56px;
   padding-top: 15px;
 }
 
 .slider__photos {
-  margin-bottom: 39px;
+  margin-bottom: 34px;
 }
 
 .slider__wrapper {
@@ -30,6 +30,7 @@
 
 .slider__button:not([disabled]):hover {
   background-color: $button-hover-background;
+  cursor: pointer;
 }
 
 .slider__button {

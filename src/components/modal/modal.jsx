@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { getModalVisibility } from '../../store/selectors';
 import { addReview, setModalVisible } from '../../store/actions';
 
+const EVENT_KEY_CODE_ESCAPE = 27;
+
 const initialFormState = {
   name: '',
   pros: '',
@@ -21,7 +23,7 @@ function Modal({ isModalVisible, setModalVisible, addReview }) {
   const rating = formState.rating - 1;
 
   const handleEscKeydown = (evt) => {
-    if (evt.keyCode === 27) {
+    if (evt.keyCode === EVENT_KEY_CODE_ESCAPE) {
       closeModalForm();
     }
   };
@@ -80,8 +82,10 @@ function Modal({ isModalVisible, setModalVisible, addReview }) {
   });
 
   if (!isModalVisible) {
+    document.body.style.overflow = 'auto';
     return null;
   }
+  document.body.style.overflow = 'hidden';
 
   return (
     <section className="modal">
@@ -106,6 +110,7 @@ function Modal({ isModalVisible, setModalVisible, addReview }) {
               aria-label="Имя пользователя"
               value={ formState.name }
               onChange={ handleFieldChange }
+              autoFocus={ true }
             />
           </div>
           <input

@@ -1,7 +1,7 @@
 const details = {
   title: 'Марпех 11',
-  fuelType: 'Бензин',
-  gearType: 'Механика',
+  fuelType: 'бензин',
+  gearType: 'механика',
   horsePower: '100 л.с.',
   engineValue: '1.4 л',
   currentPrice: '2 300 000 ₽',
