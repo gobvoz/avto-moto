@@ -1,0 +1,23 @@
+.new-model {
+  position: relative;
+}
+
+.new-model::before {
+  content: "new model";
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 122px;
+  height: 33px;
+
+  font-weight: 600;
+  font-size: 10px;
+  text-align: center;
+  line-height: 33px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+  background-color: $red-color;
+}

@@ -1,5 +1,6 @@
 .menu {
   width: 100%;
+  margin-right: 42px;
 }
 
 .menu__list {
@@ -21,7 +22,11 @@
 }
 
 .menu__list--header .menu__item {
-  margin: 5px 0 5px 68px;
+  margin: 5px 0 5px 73px;
+}
+
+.menu__list--footer .menu__item {
+  margin-left: 10px;
 }
 
 .menu__list--footer .menu__item + .menu__item {
